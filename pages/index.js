@@ -1,19 +1,20 @@
-import Image from "next/image";
-import localFont from "next/font/local";
+import Category from "@/components/module/category"
+import SearchBox from "@/components/module/searchBox"
+import CarsPage from "@/components/templates/carsPage"
+import carsData from "@/data/carsData"
+import { useRouter } from "next/router"
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
-
-export default function Home() {
+function Home() {
+  const router = useRouter();
+  const car = carsData.slice(0,3);
   return (
-    <div>car shop project</div>
+    <div>
+      <SearchBox carsData={carsData} />
+      <Category />
+      <button className="bg-slate-900 hover:bg-slate-600 transition-all ease-out text-white font-semibold p-2 w-full my-4 rounded-md" onClick={() => router.push("/cars")}>See All Car</button>
+      <CarsPage data={car} />
+    </div>
   );
 }
+
+export default Home;
