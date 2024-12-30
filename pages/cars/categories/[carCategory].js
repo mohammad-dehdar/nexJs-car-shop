@@ -8,7 +8,9 @@ import CarsPage from "@/components/templates/CarsPage";
 function CarCategory() {
     const router = useRouter()
     const { carCategory } = router.query
-    const filteredCars = carsData.filter((cars) => cars.category === carCategory.toLowerCase())
+    const filteredCars = carCategory 
+    ? carsData.filter((cars) => cars.category === carCategory.toLowerCase())
+    : [];
 
     return (
         <div>
