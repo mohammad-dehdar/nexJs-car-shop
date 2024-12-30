@@ -1,5 +1,6 @@
 import Card from "../module/Card"
 
+
 function CarsPage({ data }) {
     return (
         <div className="flex flex-wrap justify-between gap-y-4 max-sm:justify-center">
