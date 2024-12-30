@@ -1,6 +1,6 @@
 import Category from "@/components/module/category"
 import SearchBox from "@/components/module/searchBox"
-import CarsPage from "@/components/templates/carsPage"
+import CarsPage from "@/components/templates/CarsPage"
 import carsData from "@/data/carsData"
 import { useRouter } from "next/router"
 

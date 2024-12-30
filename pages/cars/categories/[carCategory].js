@@ -1,8 +1,8 @@
 import { useRouter } from "next/router";
 import carsData from "@/data/carsData";
-import CarsPage from "@/components/templates/CarsPage";
 import { ArrowLeft } from "lucide-react";
 import Category from "@/components/module/category";
+import CarsPage from "@/components/templates/CarsPage";
 
 
 function CarCategory() {
